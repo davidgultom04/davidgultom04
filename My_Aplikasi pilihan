@@ -1,0 +1,106 @@
+import javax.swing.*;
+import java.io.*;
+public class My_Aplikasi {
+ public static void main(String[] args) {       
+                JOptionPane.showMessageDialog(null, "Selamat datang di MyAplikasi");
+                String menu = JOptionPane.showInputDialog(null, "1. Operasi Matematika\n2. Bilangan genap ganjil\n3. Diskon belanja\n4. Penilaian Mahasiswa\n5. EXIT");
+                int pilih = Integer.parseInt(menu);
+
+                switch (pilih) {
+                    case 1:
+                        String matematika = JOptionPane.showInputDialog(null, "1.Penjumlahan\n2. Pengurangan\n3.Perkalian\n4.Pembagian");
+                        int piliharit = Integer.parseInt(matematika);
+                        switch (piliharit) {
+                            
+                        
+                            case 1:
+                                String tambaha = JOptionPane.showInputDialog(null, "Masukkan angka pertama");
+                                int tambah1 = Integer.parseInt(tambaha);
+                                String tambahb = JOptionPane.showInputDialog(null, "Masukkan angka kedua");
+                                int tambah2 = Integer.parseInt(tambahb);
+                                int hasiltambah = tambah1 + tambah2;
+                                JOptionPane.showMessageDialog(null, "Hasil penjumlahan dari "+tambah1+" + "+tambah2+" adalah " + hasiltambah);
+                                break;
+                                
+                            case 2:
+                                String kuranga = JOptionPane.showInputDialog(null, "Masukkan angka pertama");
+                                int kurang1 = Integer.parseInt(kuranga);
+                                String kurangb = JOptionPane.showInputDialog(null, "Masukkan angka kedua");
+                                int kurang2 = Integer.parseInt(kurangb);
+                                int hasilkurang = kurang1 - kurang2;
+                                JOptionPane.showMessageDialog(null, "Hasil penjumlahan dari "+kurang1+" + "+kurang2+" adalah " + hasilkurang);
+                                break;
+                                
+                             case 3:
+                                String kalia = JOptionPane.showInputDialog(null, "Masukkan angka pertama");
+                                int kali1 = Integer.parseInt(kalia);
+                                String kalib = JOptionPane.showInputDialog(null, "Masukkan angka kedua");
+                                int kali2 = Integer.parseInt(kalib);
+                                int hasilkali = kali1 * kali2;
+                                JOptionPane.showMessageDialog(null, "Hasil penjumlahan dari "+kali1+" * "+kali2+" adalah " + hasilkali);
+                                break;
+                                
+                            case 4:
+                                String bagia = JOptionPane.showInputDialog(null, "Masukkan angka pertama");
+                                int bagi1 = Integer.parseInt(bagia);
+                                String bagib = JOptionPane.showInputDialog(null, "Masukkan angka kedua");
+                                int bagi2 = Integer.parseInt(bagib);
+                                int hasilbagi = bagi1 / bagi2;
+                                JOptionPane.showMessageDialog(null, "Hasil penjumlahan dari "+bagi1+" / "+bagi2+" adalah " + hasilbagi);
+                                break;                                                                                                       
+                            }      
+                            case 2:
+                                String ganjilgenapa = JOptionPane.showInputDialog(null, "Masukkan angka yang akan dicek");
+                                int ganjilgenap1=Integer.parseInt(ganjilgenapa);
+                                if(ganjilgenap1%2==0){
+                                JOptionPane.showMessageDialog(null,"Bilangan "+ganjilgenap1+" adalah bilangan GENAP");
+                            }
+                            else {
+                                JOptionPane.showMessageDialog(null,"Bilangan "+ganjilgenap1+" adalah bilangan Ganjil");
+                            }
+                            break;
+                        
+                     case 3:
+                        String belanja=JOptionPane.showInputDialog(null,"Masukan Total Belanja Anda ");
+                        int harga=Integer.parseInt(belanja);
+                        if ((harga >= 500000)&&(harga<1000000)) {                        
+                            int hasildiskon=harga*5/100;
+                            int akhir=harga-hasildiskon;
+                            JOptionPane.showMessageDialog(null,"Anda mendapatkan diskon 5%");
+                            JOptionPane.showMessageDialog(null,"Total belanja anda "+akhir);
+                        }                   
+                         else if ((harga >= 1000000)&&(harga<1001000)) {
+                            int hasildiskon=harga*10/100;
+                            int akhir=harga-hasildiskon;
+                            JOptionPane.showMessageDialog(null,"Anda mendapatkan diskon 10%");
+                            JOptionPane.showMessageDialog(null,"Total belanja anda "+akhir);
+                        }
+                        else if ((harga >= 1001000)&&(harga<2000000)) {
+                            int hasildiskon=harga*15/100;
+                            int akhir=harga-hasildiskon;
+                            JOptionPane.showMessageDialog(null,"Anda mendapatkan diskon 15%");
+                            JOptionPane.showMessageDialog(null,"Total belanja anda "+akhir);
+                        }
+                         else if (harga>=2000000) {
+                            int hasildiskon=harga*25/100;
+                            int akhir=harga-hasildiskon;
+                            JOptionPane.showMessageDialog(null,"Anda mendapatkan diskon 25%");
+                            JOptionPane.showMessageDialog(null,"Total belanja anda "+akhir);
+                        }
+                        else {
+                            JOptionPane.showMessageDialog(null,"Total belanja anda "+harga);
+                        }
+                        
+                    case 4:
+                        String nama = JOptionPane.showInputDialog("Masukkan Nama Mahasiswa ");
+                        String nilai =JOptionPane.showInputDialog("Masukkan Nilai Mahasiswa");
+                        int nilaimhs= Integer.parseInt(nilai);
+                         JOptionPane.showMessageDialog(null, "Nama Mahasiswa " +nama+" dengan nilai " +nilaimhs);
+                        
+                    case 5:
+                        JOptionPane.showMessageDialog(null, "Keluar dari Aplikasi?");
+                        System.exit(0);
+                        break;
+        }
+    }
+}
