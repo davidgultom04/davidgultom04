@@ -1,0 +1,20 @@
+public class if2 {
+    public static void main(String[]args){
+        int nilai = 70;
+        if((nilai>=80)&&(nilai<=100)){
+            System.out.print(nilai + "adalah nilai A");
+        }
+        else if((nilai>=70)&&(nilai<=79)){
+             System.out.print(nilai + "adalah nilai B");
+        }
+        else if((nilai>=60)&&(nilai<=69)){
+            System.out.print(nilai + "adalah nilai C");
+        }
+         else if((nilai>=50)&&(nilai<=59)){
+             System.out.print(nilai + "adalah nilai D");
+         }
+         else{
+             System.out.print("Anda tidak Lulus");
+         }
+    }
+}
