@@ -1,0 +1,24 @@
+import java.io.*;
+import javax.swing.JOptionPane;
+public class latihan1JOptionPane {
+     public static void main (String []args){
+        System.out.print("Masukan Total Belanja : ");
+        String belanja = JOptionPane.showInputDialog ("Masukkan Total Belanja Anda :"); 
+        double total_belanja = Double.parseDouble(belanja);
+        double harga_akhir;
+        
+        System.out.println("Total Belanja : Rp." +total_belanja);
+        if (total_belanja >= 750000 && total_belanja<=1500000){
+            harga_akhir = total_belanja -(0.35*total_belanja);
+            JOptionPane.showMessageDialog (null , "Total Belanja Anda (35%) : "+harga_akhir ,"Total Belanja" ,JOptionPane.INFORMATION_MESSAGE);
+        }
+        else if (total_belanja >= 2500000 && total_belanja<=4500000){
+            harga_akhir = total_belanja -(0.50*total_belanja);
+            JOptionPane.showMessageDialog (null , "Total Belanja Anda (50%) : "+harga_akhir ,"Total Belanja" ,JOptionPane.INFORMATION_MESSAGE);
+        }
+        else {
+            harga_akhir = total_belanja;
+            JOptionPane.showMessageDialog (null , "Total Belanja Anda : "+harga_akhir ,"Total Belanja" ,JOptionPane.INFORMATION_MESSAGE);
+        }
+    }
+}
