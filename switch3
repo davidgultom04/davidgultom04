@@ -1,0 +1,22 @@
+public class switch3 {
+    public static void main(String[]args){
+        double tinggi = 1.5;
+        int berat = 45;
+        double tinggiInt = tinggi*10;
+        double IMT = berat/tinggi;
+        int nilaiFix = (int) IMT;
+            switch(nilaiFix){
+                case 150:
+                    System.out.print("Kurus");
+                break;
+                case 186:
+                    System.out.print("Normal");
+                break;
+                case 251:
+                    System.out.print("Gemuk");
+                break;
+                default :
+                    System.out.print("Obesitas");
+            }
+    }
+}
