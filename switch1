@@ -1,0 +1,32 @@
+public class switch1 {
+    public static void main(String[]args){
+        String jurusan ="IPA";
+        double nilai = 8.5;
+        double nilaiInt = nilai*10;
+        int nilaiFix = (int)nilaiInt;
+        switch (jurusan){
+            case"IPA":
+                switch(nilaiFix){
+                    case 85:
+                        System.out.print("Anda lulus IPA");
+                    break;
+                    default:
+                        System.out.print("Anda tidak lulus");
+        }
+           break;
+           case"IPS":
+                switch(nilaiFix){
+                    case 75:
+                        System.out.print("Anda Lulus IPS");
+                    break;
+                    default:
+                        System.out.print("Anda tidak lulus");      
+                }
+           break;
+           default:
+               System.out.print("Jurusan anda tidak ada");
+        }
+        
+    }
+}
+    
