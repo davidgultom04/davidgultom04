@@ -1,0 +1,28 @@
+import java.util.*;
+import javax.swing.JOptionPane;
+public class latihan2JOptionPane {
+      public static void main(String [] args){
+        String nama = JOptionPane.showInputDialog ("Masukkan Nama Anda :"); 
+        String tahunLahir = JOptionPane.showInputDialog ("Masukkan Tahun Lahir Anda : "); 
+        int tahun = Integer.parseInt(tahunLahir);
+        String status;
+        
+        if(tahun>1944&&tahun<=1964){
+            status = "Baby Boomer";
+        }
+        else if(tahun>1965&&tahun<=1979){
+            status = "Generasi X";
+        }
+        else if(tahun>1980&&tahun<=1994){
+            status = "Generasi Y";
+        }
+        else if(tahun>1995&&tahun<=2015){
+            status = "Generasi Z";
+        }
+        else{
+            status = "Belum Terdeteksi";
+        }
+        
+        JOptionPane.showMessageDialog (null , nama+", berdasarkann tahun lahir, anda tergolong "+status ,"Informasi Generasi" ,JOptionPane.INFORMATION_MESSAGE);
+      }
+}
