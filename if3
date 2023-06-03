@@ -1,0 +1,20 @@
+public class if3 {
+    public static void main(String[]args){
+        double tinggi = 1.7;
+        int berat = 50;
+        double IMT = berat/tinggi;
+        
+        if(IMT<=15.0){
+            System.out.print("Kurus");
+        }
+        else if((IMT>=18.6)&&(IMT<=25.0)){
+            System.out.print("Normal");
+        }
+        else if((IMT>=25.1)&&(IMT<=30.0)){
+            System.out.print("Gemuk");
+        }
+        else{
+            System.out.print("Obesitas");
+        }
+    }
+}
