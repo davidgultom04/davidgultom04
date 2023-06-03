@@ -1,0 +1,27 @@
+import java.awt.Color;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class parameter2 {
+    public static void main(String[]args){
+        JFrame frame = new JFrame("Hitung Luas Segitiga");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(800,600);
+        frame.getContentPane().setBackground(Color.BLUE);
+        frame.setVisible(true);
+        
+        while(true){
+            try{
+                double alas = Double.parseDouble(JOptionPane.showInputDialog(frame, "Masukkan Alas :", "Perhitungan Luas Segitiga", JOptionPane.INFORMATION_MESSAGE));
+                double tinggi = Double.parseDouble(JOptionPane.showInputDialog(frame, "Masukkan Tinggi :", JOptionPane.INFORMATION_MESSAGE));
+                double luas = 0.5*alas*tinggi;
+                JOptionPane.showMessageDialog(frame, "Luas Segitiga = "+luas, "Perhitungan Luas Segitiga", JOptionPane.INFORMATION_MESSAGE);
+                break;
+            }
+                catch(NumberFormatException ex){
+                        JOptionPane.showMessageDialog(frame, "Terjadi kesalahan inputan", "Error", JOptionPane.ERROR_MESSAGE);
+                        
+                        }
+            }
+        }
+    }
