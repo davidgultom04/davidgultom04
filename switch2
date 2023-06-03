@@ -1,0 +1,21 @@
+public class switch2 {
+    public static void main(String[]args){
+        int nilai = 80;
+        switch (nilai){
+            case 80:
+                System.out.print("Nilai anda adalah A");
+                break;
+            case 70:
+                System.out.print("Nilai anda adalah B");
+                break;
+            case 60:
+                System.out.print("Nilai anda adalah C");
+                break;
+            case 50:
+                System.out.print("Nilai anda adalah B");
+                break;
+            default:
+                System.out.print("Anda tidak lulus");
+        }
+    }
+}
