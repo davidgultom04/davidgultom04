@@ -1,0 +1,32 @@
+import java.util.*;
+public class latihan2Scanner {
+   public static void main(String[] Args) {
+        Scanner input = new Scanner(System.in);
+        String nama;
+        int tahun_lahir;
+        System.out.print("Masukkan nama anda: ");
+        nama = input.nextLine();
+        System.out.print("Masukkan tahun kelahiran anda: ");
+        tahun_lahir = input.nextInt();
+
+        if((tahun_lahir >= 1944)&&(tahun_lahir <= 1964)) {
+        System.out.println("Nama Anda adalah " +nama);
+        System.out.println("berdasarkan tahun lahir maka anda tergolong generasi Baby Boomer");
+    }
+        else if((tahun_lahir >= 1965)&&(tahun_lahir <= 1979)){
+        System.out.println("Nama Anda adalah " +nama);
+        System.out.println("berdasarkan tahun lahir maka anda tergolong generasi X");
+    }
+        else if((tahun_lahir >= 1980)&&(tahun_lahir <= 1994)){
+        System.out.println("Nama Anda adalah " +nama);
+        System.out.println("berdasarkan tahun lahir maka anda tergolong generasi Y (Millenials)");
+    }
+        else if((tahun_lahir >= 1995)&&(tahun_lahir <= 2015)){
+        System.out.println("Nama Anda adalah " +nama);
+        System.out.println("berdasarkan tahun lahir maka anda tergolong generasi Z");
+    }
+        else{
+  System.out.println("Tidak Ada Informasi Mengenai Tahun Lahir Anda");
+}
+}
+}
