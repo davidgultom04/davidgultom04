@@ -1,0 +1,16 @@
+public class if1 {
+    public static void main(String[]args){
+        String jurusan = "IPA";
+        double nilai = 9.5;
+        
+        if((jurusan=="IPA")&&(nilai>=8.5)){
+            System.out.print("Anda lulus IPA");
+        }
+        else if((jurusan=="IPS")&&(nilai >=7.5)){
+            System.out.print("Anda Lulus IPS");
+        }
+        else{
+            System.out.print("Anda tidak Lulus");
+        }
+    }
+}
