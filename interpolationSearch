@@ -1,0 +1,54 @@
+public class InterpolationSearch {
+    public static int interpolationSearch(int[] arr, int x) {
+        int low = 0;
+        int high = arr.length - 1;
+
+        while (low <= high && x >= arr[low] && x <= arr[high]) {
+            int posisi = low + ((x - arr[low]) * (high - low)) / (arr[high] - arr[low]);
+
+            if (arr[posisi] == x) {
+                return posisi;
+            } else if (arr[posisi] < x) {
+                low = posisi + 1;
+            } else {
+                high = posisi - 1;
+            }
+        }
+
+        return -1; // Nilai tidak ditemukan
+    }
+
+    public static void main(String[] args) {
+        int[] deret = {3, 9, 11, 12, 15, 17, 23, 31, 35};
+        
+        // Contoh pencarian untuk x = 15
+        int x = 15;
+        int hasil = interpolationSearch(deret, x);
+
+        if (hasil != -1) {
+            System.out.println("Nilai " + x + " ditemukan di indeks " + hasil);
+        } else {
+            System.out.println("Nilai " + x + " tidak ditemukan dalam deret");
+        }
+
+        // Contoh pencarian untuk x = 5
+        x = 5;
+        hasil = interpolationSearch(deret, x);
+
+        if (hasil != -1) {
+            System.out.println("Nilai " + x + " ditemukan di indeks " + hasil);
+        } else {
+            System.out.println("Nilai " + x + " tidak ditemukan dalam deret");
+        }
+
+        // Contoh pencarian untuk x = 35
+        x = 35;
+        hasil = interpolationSearch(deret, x);
+
+        if (hasil != -1) {
+            System.out.println("Nilai " + x + " ditemukan di indeks " + hasil);
+        } else {
+            System.out.println("Nilai " + x + " tidak ditemukan dalam deret");
+        }
+    }
+}
